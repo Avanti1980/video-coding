@@ -88,7 +88,7 @@ clip = core.d2v.Source(input=r'*.d2v', threads=1)
 # 切片段
 clip = core.std.Trim(clip, first=21793, last=27805)
 
-# 删除太标 只能用于8位精度
+# 删除台标 只能用于8位精度
 clip = core.delogo.EraseLogo(clip, r'*.lgd')
 
 # 转成16位精度
