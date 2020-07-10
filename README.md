@@ -27,6 +27,7 @@ $ yay vapoursynth
 ==> 要安装的包 (示例: 1 2 3, 1-3 或 ^4)
 ==>
 ```
+
 　　我个人安装的插件是
 ```shell
 $ pacman -Q | grep vapoursynth
@@ -67,6 +68,7 @@ vapoursynth-plugin-waifu2x-w2xc-git r8.3.ga9f064a-1
 vapoursynth-plugin-yadifmod-git r10.1.1.g2b45ada-1
 vapoursynth-plugin-znedi3-git r2.0.g78e5e67-1
 ```
+
 　　下面是vpy脚本模板
 ```python
 #!/bin/env python
@@ -146,11 +148,11 @@ clip = core.sub.TextFile(clip, file=r'*.ass')
 clip.set_output()
 ```
 
-脚本写好后就可以通过vspipe喂给编码器了，一个x264编码的压制任务可以通过如下命令行实现：
+　　脚本写好后就可以通过vspipe喂给编码器了，h264编码任务可以通过如下命令行实现：
 ```
 vspipe **.vpy - --y4m | x264 --demuxer y4m - --preset slower --crf 20 --tune film --keyint 250 --min-keyint 1 --input-depth 16 --sar 1:1 -o a.264 -
 ```
-x265编码的压制任务则可以通过如下命令行实现：
+h265编码任务可以通过如下命令行实现：
 ```
 vspipe **.vpy - --y4m | x265 --y4m --preset slower --deblock -1:-1 --ctu 32 --qg-size 8 --crf 15.0 --pbratio 1.2 --cbqpoffs -2 --crqpoffs -2 --no-sao --me 3 --subme 5 --merange 38 --b-intra --limit-tu 4 --no-amp --ref 4 --weightb --keyint 360 --min-keyint 1 --bframes 6 --aq-mode 1 --aq-strength 0.8 --rd 5 --psy-rd 2.0 --psy-rdoq 1.0 --rdoq-level 2 --no-open-gop --rc-lookahead 80 --scenecut 40 --qcomp 0.65 --no-strong-intra-smoothing --input-depth 16 --output-depth 10 --sar 1:1 -o a.hevc -
 ```
