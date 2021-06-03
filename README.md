@@ -1,4 +1,4 @@
-　　该项目旨在记录自己压制过的视频：[https://avanti1980.gitee.io/video-coding/](https://avanti1980.gitee.io/video-coding/)
+　　该项目旨在记录自己压制过的视频：[github地址](https://avanti1980.github.io/video-coding/)
 
 　　考虑到arch下的安装、配置和更新，压制工具必然选[VapourSynth](http://www.vapoursynth.com/)，另外插件也很丰富，免去了到处找插件的烦恼：
 ```shell
