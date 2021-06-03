@@ -1,0 +1,598 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>压制 & 上传 · video-coding</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Avanti">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="download-rename.html" />
+    
+
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    绯红
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="download-rename.html">
+            
+                <a href="download-rename.html">
+            
+                    
+                    下载 & 重命名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="encoding-upload.html">
+            
+                <a href="encoding-upload.html">
+            
+                    
+                    压制 & 上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >压制 & 上传</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x3000;&#x3000;&#x6668;&#x95F4;&#x5267;&#x6D0B;&#x6D0B;&#x6D12;&#x6D12;150+&#x96C6;&#xFF0C;&#x6BCF;&#x96C6;&#x7684;&#x538B;&#x5236;&#x6D41;&#x7A0B;&#x53C8;&#x975E;&#x5E38;&#x96F7;&#x540C;&#xFF0C;&#x6240;&#x4EE5;&#x5FC5;&#x7136;&#x6279;&#x91CF;&#x5904;&#x7406;&#x4EE5;&#x8282;&#x7EA6;&#x65F6;&#x95F4;&#x3002;&#x5177;&#x4F53;&#x5230;&#x7EEF;&#x7EA2;&#xFF0C;&#x6BCF;&#x96C6;&#x9700;&#x5206;&#x6210;4&#x4E2A;&#x90E8;&#x5206;&#x5206;&#x522B;&#x5904;&#x7406;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x5176;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF1A;</p>
+<ol>
+<li>op&#x4E4B;&#x524D;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x65E0;&#x9700;&#x505A;&#x7279;&#x522B;&#x5904;&#x7406;</li>
+<li>op&#x4E2D;&#x7684;&#x52A8;&#x753B;&#x90E8;&#x5206;&#xFF0C;&#x8FD9;&#x90E8;&#x5206;&#x89C6;&#x9891;&#x7684;&#x539F;&#x59CB;&#x5E27;&#x7387;&#x662F;12fps&#xFF0C;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x5728;30fps&#x7684;&#x7535;&#x89C6;&#x4E0A;&#x64AD;&#x653E;&#xFF0C;&#x5148;&#x500D;&#x5E27;&#x5230;24fps&#x7136;&#x540E;&#x505A;&#x80F6;&#x5377;&#x8FC7;&#x5E26;&#xFF0C;&#x6240;&#x4EE5;&#x538B;&#x5236;&#x65F6;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x9006;&#x56DE;&#x53BB;&#xFF0C;&#x5148;&#x505A;&#x53CD;&#x80F6;&#x5377;&#x8FC7;&#x5E26;&#xFF0C;&#x7136;&#x540E;&#x780D;&#x6389;&#x4E00;&#x534A;&#x91CD;&#x590D;&#x5E27;</li>
+<li>toda&#x5355;&#x4EBA;&#x5BF9;&#x7740;&#x955C;&#x5934;&#x5FAE;&#x7B11;&#x7684;&#x7279;&#x5199;&#x662F;24fps&#x8F6C;30fps&#x7684;&#xFF0C;&#x9700;&#x505A;&#x53CD;&#x80F6;&#x5377;&#x8FC7;&#x5E26;</li>
+<li>op&#x4E4B;&#x540E;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x65E0;&#x9700;&#x505A;&#x7279;&#x522B;&#x5904;&#x7406;</li>
+</ol>
+<p>&#x3000;&#x3000;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x591A;&#x6B21;&#x538B;&#x5236;&#xFF0C;&#x5148;&#x5C06;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x8D77;&#x59CB;&#x5E27;&#x6570;&#x4FDD;&#x5B58;&#x5728;tasklist.txt&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-shell">$ cat tasklist.txt        
+# 190930-ep1,971,4605,7134,7303,27944,&#x5C0F;&#x6863;&#x526A;&#x524D;&#x540E;&#x6863;&#x591A;&#x4F59;&#x5185;&#x5BB9;
+# 191001-ep2,978,2764,4829,4922,27951
+# &#x2026;&#x2026;
+# 191011-ep11,986,1536,3601,3694,27960
+# 191012-ep12,987,1864,3929,4022,27960,lsmash
+# 191012-ep12,980,1857,3922,4015,27953,d2vwitch
+# 191012-ep12,971,1848,3913,4006,27944,ffms2
+# &#x2026;&#x2026;            
+# 191016-ep15,989,1617,3682,3775,27962
+# 191017-ep16,999,2683,4748,4841,27972,&#x4ECE;&#x672C;&#x96C6;&#x5F00;&#x59CB;&#x5C0F;&#x6863;&#x4E0D;&#x526A;&#x524D;&#x540E;&#x6863;&#x591A;&#x4F59;&#x5185;&#x5BB9;
+# 191018-ep17,1007,1744,3809,3902,27980
+# &#x2026;&#x2026;
+# 191123-ep48,989,2541,4606,4699,27962
+</code></pre>
+<p>&#x7B2C;1&#x4E2A;&#x6570;&#x5B57;&#x4E0D;&#x662F;&#x96F6;&#x662F;&#x56E0;&#x4E3A;&#x8FD8;&#x5F55;&#x4E86;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#x524D;&#x6863;&#x8282;&#x76EE;&#xFF0C;&#x7B2C;5&#x4E2A;&#x6570;&#x5B57;&#x662F;&#x540E;&#x6863;&#x8282;&#x76EE;&#x7684;&#x8D77;&#x59CB;&#x5E27;&#x6570;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x538B;&#x5236;&#x7684;vpy&#x811A;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment">##!/bin/env python</span>
+<span class="hljs-comment">## coding: utf-8</span>
+<span class="hljs-keyword">import</span> vapoursynth <span class="hljs-keyword">as</span> vs
+<span class="hljs-keyword">import</span> havsfunc <span class="hljs-keyword">as</span> haf
+core = vs.get_core()
+
+<span class="hljs-comment"># &#x8BFB;&#x53D6;&#x6587;&#x4EF6;</span>
+clip = core.lsmas.LWLibavSource(source=<span class="hljs-string">r&apos;&#x539F;&#x6863;/19****-ep*.ts&apos;</span>)
+
+<span class="hljs-comment"># &#x526A;&#x6389;&#x591A;&#x5F55;&#x7684;&#x524D;&#x540E;&#x6863;&#x8282;&#x76EE; &#x5177;&#x4F53;&#x6570;&#x636E;&#x4ECE;tasklist.txt&#x4E2D;&#x8BFB;&#x53D6; &#x6BCF;&#x96C6;&#x90FD;&#x4E0D;&#x4E00;&#x6837;</span>
+clip = core.std.Trim(clip, first=<span class="hljs-number">971</span>, last=<span class="hljs-number">27943</span>)
+
+<span class="hljs-comment"># &#x53BB;NHKBS&#x53F0;&#x6807;</span>
+clip = core.delogo.EraseLogo(clip, <span class="hljs-string">r&apos;logo/NHKBSP2019 1920x1080.lgd&apos;</span>)
+
+clip = core.fmtc.bitdepth(clip, bits=<span class="hljs-number">16</span>)
+
+<span class="hljs-comment"># &#x52A0;&#x5B57;&#x5E55;&#x7EC4;logo</span>
+[logo, alpha] = core.imwri.Read(filename=<span class="hljs-string">&apos;logo/logo.png&apos;</span>, alpha=<span class="hljs-keyword">True</span>)
+logo = core.resize.Bicubic(clip=logo, format=clip.format.id, matrix_s=<span class="hljs-string">&apos;709&apos;</span>)
+alpha = core.fmtc.bitdepth(clip=alpha, bits=clip.format.bits_per_sample, fulld=<span class="hljs-keyword">True</span>)
+clip = haf.Overlay(clipa=clip, clipb=logo, mask=alpha, x=<span class="hljs-number">1400</span>, y=<span class="hljs-number">-460</span>)
+
+<span class="hljs-comment"># &#x964D;&#x566A;</span>
+clip = core.knlm.KNLMeansCL(clip, d=<span class="hljs-number">1</span>, a=<span class="hljs-number">2</span>, s=<span class="hljs-number">4</span>, device_type=<span class="hljs-string">&apos;gpu&apos;</span>)
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x5B57;&#x5E55;</span>
+clip = core.sub.TextFile(clip, file=<span class="hljs-string">r&apos;&#x538B;&#x5236;&#x5B57;&#x5E55;/19****-ep*.ass&apos;</span>)
+
+<span class="hljs-comment"># &#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x65E0;&#x9700;&#x7279;&#x522B;&#x5904;&#x7406;</span>
+clip1 = core.std.Trim(clip, first=<span class="hljs-number">971</span><span class="hljs-number">-971</span>, last=<span class="hljs-number">4604</span><span class="hljs-number">-971</span>)
+
+<span class="hljs-comment"># &#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x5148;&#x53CD;&#x80F6;&#x5377;&#x8FC7;&#x5E26; &#x518D;&#x780D;&#x6389;&#x4E00;&#x534A;&#x5E27;</span>
+clip2 = core.std.Trim(clip, first=<span class="hljs-number">4605</span><span class="hljs-number">-971</span>, last=<span class="hljs-number">7133</span><span class="hljs-number">-971</span>)
+clip2 = core.vivtc.VFM(core.resize.Bicubic(clip2, format=vs.YUV420P8), order=<span class="hljs-number">1</span>, clip2=clip2)
+clip2 = core.vivtc.VDecimate(clip2)
+clip2 = haf.ChangeFPS(clip2, <span class="hljs-number">12000</span>, <span class="hljs-number">1001</span>)
+
+<span class="hljs-comment"># &#x7B2C;&#x4E09;&#x90E8;&#x5206;&#x53CD;&#x80F6;&#x5377;&#x8FC7;&#x5E26;</span>
+clip3 = core.std.Trim(clip, first=<span class="hljs-number">7134</span><span class="hljs-number">-971</span>, last=<span class="hljs-number">7302</span><span class="hljs-number">-971</span>)
+clip3 = core.vivtc.VFM(core.resize.Bicubic(clip3, format=vs.YUV420P8), order=<span class="hljs-number">1</span>, clip2=clip3)
+clip3 = core.vivtc.VDecimate(clip3)
+
+<span class="hljs-comment"># &#x7B2C;&#x56DB;&#x90E8;&#x5206;&#x65E0;&#x9700;&#x7279;&#x522B;&#x5904;&#x7406;</span>
+clip4 = core.std.Trim(clip, first=<span class="hljs-number">7303</span><span class="hljs-number">-971</span>, last=<span class="hljs-number">27943</span><span class="hljs-number">-971</span>)
+
+<span class="hljs-comment"># &#x5F53;&#x524D;&#x8981;&#x538B;&#x5236;&#x54EA;&#x4E00;&#x90E8;&#x5206; &#x5C31;&#x8F93;&#x51FA;&#x54EA;&#x4E00;&#x90E8;&#x5206;</span>
+clip*.set_output()
+</code></pre>
+<p>&#x3000;&#x3000;&#x6700;&#x7EC8;shell&#x811A;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-shell">#!/usr/bin/env bash
+
+SAVEIFS=$IFS
+IFS=$(echo -en &quot;\n\b&quot;)
+
+# &#x8BFB;&#x53D6;&#x7F51;&#x76D8;&#x719F;&#x8089;&#x6587;&#x4EF6;&#x5939;&#x540D;&#x4E2D;&#x7684;&#x66F4;&#x65B0;&#x96C6;&#x6570;
+total_ep=$(baidupcs ls /&#x7EEF;&#x7EA2; | sed -n &apos;s/.*&#x7B2C;\(.*\)&#x96C6;.*/\1/p&apos;)
+
+# &#x8BFB;&#x53D6;&#x7F51;&#x76D8;&#x719F;&#x8089;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;&#x5B9E;&#x9645;&#x6587;&#x4EF6;&#x603B;&#x6570; &#x548C;total_ep&#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x4E00;&#x6837;
+total_file=$(baidupcs ls /&#x7EEF;&#x7EA2;/&#x7EEF;&#x7EA2;&#x3010;&#x66F4;&#x65B0;&#x81F3;&#x7B2C;$total_ep&#x96C6;&#x3011; | sed -n &apos;s/.*&#x6587;&#x4EF6;&#x603B;&#x6570;: \(.*\),.*/\1/p&apos;)
+echo &#x5F53;&#x524D;&#x7F51;&#x76D8;&#x4E2D;&#x5171;&#x6709;$total_file&#x96C6;
+
+while read -r line; do # &#x6839;&#x636E;tasklist.txt&#x8FDB;&#x884C;&#x538B;&#x5236;
+
+    line=${line// /} # &#x53BB;&#x6389;&#x7A7A;&#x683C;
+
+    # &#x5982;&#x679C;&#x542B;&#x6709;#&#x53F7;&#x6216;&#x6574;&#x884C;&#x4E3A;&#x7A7A;&#x5219;&#x8DF3;&#x8FC7; &#x5426;&#x5219;&#x8FDB;&#x884C;&#x538B;&#x5236; &#x6362;&#x8A00;&#x4E4B;&#x60F3;&#x538B;&#x5236;&#x54EA;&#x4E00;&#x96C6;&#x5C31;&#x5C06;&#x524D;&#x9762;&#x7684;#&#x53F7;&#x53BB;&#x6389;&#x5373;&#x53EF;
+    if [[ &quot;$line&quot; =~ &quot;#&quot; ]] || [ -z &quot;$line&quot; ]; then
+        continue
+    else
+        # &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x538B;&#x5236;&#x7684;&#x6587;&#x4EF6;&#x540D; &#x6BD4;&#x5982;190930-ep1
+        filename=$(echo $line | cut -d &apos;,&apos; -f 1)
+
+        # &#x83B7;&#x53D6;&#x96C6;&#x6570;
+        ep=$(echo $filename | cut -d &apos;p&apos; -f 2)
+
+        # &#x8865;&#x96F6;&#x5230;&#x4E09;&#x4F4D;&#x6570; &#x56E0;&#x4E3A;&#x6668;&#x95F4;&#x603B;&#x5171;150+&#x96C6;
+        if [[ $ep -lt 10 ]]; then
+            ep=00$ep
+        elif [[ $ep -lt 100 ]]; then
+            ep=0$ep
+        fi
+
+        echo ******&#x5F00;&#x59CB;&#x5904;&#x7406;ep$ep******
+
+        # &#x83B7;&#x53D6;&#x6BCF;&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x8D77;&#x59CB;&#x5E27;&#x6570;&#x548C;&#x7ED3;&#x675F;&#x5E27;&#x6570;
+        clip1_start=$(echo $line | cut -d &apos;,&apos; -f 2)
+        clip2_start=$(echo $line | cut -d &apos;,&apos; -f 3)
+        clip3_start=$(echo $line | cut -d &apos;,&apos; -f 4)
+        clip4_start=$(echo $line | cut -d &apos;,&apos; -f 5)
+        clip5_start=$(echo $line | cut -d &apos;,&apos; -f 6)
+        clip1_end=$(($clip2_start - 1))
+        clip2_end=$(($clip3_start - 1))
+        clip3_end=$(($clip4_start - 1))
+        clip4_end=$(($clip5_start - 1))
+
+        # &#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x8D77;&#x59CB;&#x5E27;&#x6570;&#x4E5F;&#x662F;&#x6574;&#x96C6;&#x7684;&#x8D77;&#x59CB;&#x5E27;&#x6570; &#x6362;&#x7B97;&#x6210;&lt;&#x65F6;:&#x5206;:&#x79D2;.&#x6BEB;&#x79D2;&gt;&#x7684;&#x683C;&#x5F0F;
+        sec=$(($clip1_start * 1001 / 30000))
+        msec=$(($clip1_start * 1001 % 30000))
+        msec=$(($msec / 3))
+        min=$(($sec / 60))
+        sec=$(($sec % 60))
+        hour=$(($min / 60))
+        min=$(($min % 60))
+        clip_start=$hour:$min:$sec.$msec
+
+        # &#x7B2C;&#x56DB;&#x90E8;&#x5206;&#x7684;&#x7ED3;&#x675F;&#x5E27;&#x6570;&#x4E5F;&#x662F;&#x6574;&#x96C6;&#x7684;&#x7ED3;&#x675F;&#x5E27;&#x6570; &#x6362;&#x7B97;&#x6210;&lt;&#x65F6;:&#x5206;:&#x79D2;.&#x6BEB;&#x79D2;&gt;&#x7684;&#x683C;&#x5F0F;
+        sec=$(($clip4_end * 1001 / 30000))
+        msec=$(($clip4_end * 1001 % 30000))
+        msec=$(($msec / 3))
+        min=$(($sec / 60))
+        sec=$(($sec % 60))
+        hour=$(($min / 60))
+        min=$(($min % 60))
+        clip_end=$hour:$min:$sec.$msec
+
+        # &#x5C06;&#x97F3;&#x9891;&#x526A;&#x51FA;&#x6765;
+        ffmpeg -nostdin -hide_banner -loglevel panic -i &#x539F;&#x6863;/$filename.ts -ss $clip_start -to $clip_end -vn -c copy $filename.aac
+
+        # &#x5199;vpy&#x811A;&#x672C;
+        echo &quot;##!/bin/env python&quot; &gt;encoder.vpy
+        echo &quot;## coding: utf-8&quot; &gt;&gt;encoder.vpy
+        echo &quot;import vapoursynth as vs&quot; &gt;&gt;encoder.vpy
+        echo &quot;import havsfunc as haf&quot; &gt;&gt;encoder.vpy
+        echo &quot;core = vs.get_core()&quot; &gt;&gt;encoder.vpy
+        echo &quot;clip = core.lsmas.LWLibavSource(source=r&apos;&#x539F;&#x6863;/$filename.ts&apos;)&quot; &gt;&gt;encoder.vpy
+        # echo &quot;clip = core.ffms2.Source(source=r&apos;&#x539F;&#x6863;/$filename.ts&apos;)&quot; &gt;&gt;encoder.vpy
+
+        if [ &quot;$ep&quot; -le 15 ] || [ &quot;$ep&quot; -ge 40 ]; then # 1-15&#x548C;40-&#x7684;&#x5B57;&#x5E55;&#x662F;&#x9488;&#x5BF9;&#x526A;&#x4E86;&#x524D;&#x540E;&#x8282;&#x76EE;&#x7684;&#x5C0F;&#x6863;&#x7684;
+            echo &quot;clip = core.std.Trim(clip, first=$clip1_start, last=$clip4_end)&quot; &gt;&gt;encoder.vpy
+        fi
+
+        echo &quot;clip = core.delogo.EraseLogo(clip, r&apos;logo/NHKBSP2019 1920x1080.lgd&apos;)&quot; &gt;&gt;encoder.vpy
+        echo &quot;clip = core.fmtc.bitdepth(clip, bits=16)&quot; &gt;&gt;encoder.vpy
+        echo &quot;[logo, alpha] = core.imwri.Read(filename=&apos;logo/logo.png&apos;, alpha=True)&quot; &gt;&gt;encoder.vpy
+        echo &quot;logo = core.resize.Bicubic(clip=logo, format=clip.format.id, matrix_s=&apos;709&apos;)&quot; &gt;&gt;encoder.vpy
+        echo &quot;alpha = core.fmtc.bitdepth(clip=alpha, bits=clip.format.bits_per_sample, fulld=True)&quot; &gt;&gt;encoder.vpy
+        echo &quot;clip = haf.Overlay(clipa=clip, clipb=logo, mask=alpha, x=1400, y=-460)&quot; &gt;&gt;encoder.vpy
+        echo &quot;clip = core.knlm.KNLMeansCL(clip, d=1, a=2, s=4, device_type=&apos;gpu&apos;)&quot; &gt;&gt;encoder.vpy
+        echo &quot;clip = core.sub.TextFile(clip, file=r&apos;&#x5B57;&#x5E55;/$filename.ass&apos;)&quot; &gt;&gt;encoder.vpy
+
+        if [ &quot;$ep&quot; -le 15 ] || [ &quot;$ep&quot; -ge 40 ]; then # 1-15&#x548C;40-&#x7684;&#x5B57;&#x5E55;&#x662F;&#x9488;&#x5BF9;&#x526A;&#x4E86;&#x524D;&#x540E;&#x8282;&#x76EE;&#x7684;&#x5C0F;&#x6863;&#x7684;
+            echo &quot;clip1 = core.std.Trim(clip, first=$clip1_start-$clip1_start, last=$clip1_end-$clip1_start)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip2 = core.std.Trim(clip, first=$clip2_start-$clip1_start, last=$clip2_end-$clip1_start)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip2 = core.vivtc.VFM(core.resize.Bicubic(clip2, format=vs.YUV420P8), order=1, clip2=clip2)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip2 = core.vivtc.VDecimate(clip2)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip2 = haf.ChangeFPS(clip2, 12000, 1001)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip3 = core.std.Trim(clip, first=$clip3_start-$clip1_start, last=$clip3_end-$clip1_start)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip3 = core.vivtc.VFM(core.resize.Bicubic(clip3, format=vs.YUV420P8), order=1, clip2=clip3)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip3 = core.vivtc.VDecimate(clip3)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip4 = core.std.Trim(clip, first=$clip4_start-$clip1_start, last=$clip4_end-$clip1_start)&quot; &gt;&gt;encoder.vpy
+        else
+            echo &quot;clip1 = core.std.Trim(clip, first=$clip1_start, last=$clip1_end)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip2 = core.std.Trim(clip, first=$clip2_start, last=$clip2_end)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip2 = core.vivtc.VFM(core.resize.Bicubic(clip2, format=vs.YUV420P8), order=1, clip2=clip2)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip2 = core.vivtc.VDecimate(clip2)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip2 = haf.ChangeFPS(clip2, 12000, 1001)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip3 = core.std.Trim(clip, first=$clip3_start, last=$clip3_end)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip3 = core.vivtc.VFM(core.resize.Bicubic(clip3, format=vs.YUV420P8), order=1, clip2=clip3)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip3 = core.vivtc.VDecimate(clip3)&quot; &gt;&gt;encoder.vpy
+            echo &quot;clip4 = core.std.Trim(clip, first=$clip4_start, last=$clip4_end)&quot; &gt;&gt;encoder.vpy
+        fi
+        echo &quot;clip1.set_output()&quot; &gt;&gt;encoder.vpy
+
+        # &#x538B;&#x5236;&#x7B2C;&#x4E00;&#x90E8;&#x5206;
+        vspipe encoder.vpy - --y4m | x264 --demuxer y4m --crf 23.0 --preset slow --tune film --keyint 600 --min-keyint 1 --input-depth 16 -o clip1.264 -
+
+        # &#x538B;&#x5236;&#x7B2C;&#x4E8C;&#x90E8;&#x5206; &#x6CE8;&#x610F;&#x5148;&#x4FEE;&#x6539;vpy&#x811A;&#x672C;&#x7684;&#x6700;&#x540E;&#x4E00;&#x884C;
+        sed -i &apos;$d&apos; encoder.vpy
+        echo &quot;clip2.set_output()&quot; &gt;&gt;encoder.vpy
+        vspipe encoder.vpy - --y4m | x264 --demuxer y4m --crf 23.0 --preset slow --tune film --keyint 600 --min-keyint 1 --input-depth 16 -o clip2.264 -
+
+        # &#x538B;&#x5236;&#x7B2C;&#x4E09;&#x90E8;&#x5206; &#x6CE8;&#x610F;&#x5148;&#x4FEE;&#x6539;vpy&#x811A;&#x672C;&#x7684;&#x6700;&#x540E;&#x4E00;&#x884C;
+        sed -i &apos;$d&apos; encoder.vpy
+        echo &quot;clip3.set_output()&quot; &gt;&gt;encoder.vpy
+        vspipe encoder.vpy - --y4m | x264 --demuxer y4m --crf 23.0 --preset slow --tune film --keyint 600 --min-keyint 1 --input-depth 16 -o clip3.264 -
+
+        # &#x538B;&#x5236;&#x7B2C;&#x56DB;&#x90E8;&#x5206; &#x6CE8;&#x610F;&#x5148;&#x4FEE;&#x6539;vpy&#x811A;&#x672C;&#x7684;&#x6700;&#x540E;&#x4E00;&#x884C;
+        sed -i &apos;$d&apos; encoder.vpy
+        echo &quot;clip4.set_output()&quot; &gt;&gt;encoder.vpy
+        vspipe encoder.vpy - --y4m | x264 --demuxer y4m --crf 23.0 --preset slow --tune film --keyint 600 --min-keyint 1 --input-depth 16 -o clip4.264 -
+
+        # &#x82E5;&#x672C;&#x5730;&#x5DF2;&#x6709;&#x719F;&#x8089;&#x5219;&#x5220;&#x9664; &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x5728;&#x91CD;&#x65B0;&#x538B;&#x5236;
+        if [ -f &quot;&#x719F;&#x8089;/&#x3010;&#x7EEF;&#x7EA2;&#x8054;&#x5408;&#x5B57;&#x5E55;&#x7EC4;&#x3011;Scarlet.Ep$ep.1080p.mp4&quot; ]; then
+            rm &quot;&#x719F;&#x8089;/&#x3010;&#x7EEF;&#x7EA2;&#x8054;&#x5408;&#x5B57;&#x5E55;&#x7EC4;&#x3011;Scarlet.Ep$ep.1080p.mp4&quot;
+        fi
+
+        # &#x5408;&#x5E76;&#x6240;&#x6709;&#x7684;.264&#x548C;.aac&#x5F97;&#x5230;&#x6700;&#x7EC8;&#x7684;&#x719F;&#x8089;
+        echo &quot;file &apos;clip1.264&apos;&quot; &gt;filelist.txt
+        echo &quot;file &apos;clip2.264&apos;&quot; &gt;&gt;filelist.txt
+        echo &quot;file &apos;clip3.264&apos;&quot; &gt;&gt;filelist.txt
+        echo &quot;file &apos;clip4.264&apos;&quot; &gt;&gt;filelist.txt
+        ffmpeg -nostdin -hide_banner -loglevel panic -f concat -i filelist.txt -i $filename.aac -c copy &#x719F;&#x8089;/&#x3010;&#x7EEF;&#x7EA2;&#x8054;&#x5408;&#x5B57;&#x5E55;&#x7EC4;&#x3011;Scarlet.Ep$ep.1080p.mp4
+
+        rm &#x539F;&#x6863;/*lwi *.264 filelist.txt encoder.vpy $filename.aac # &#x5220;&#x9664;&#x538B;&#x5236;&#x7684;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;
+
+        # &#x82E5;&#x7F51;&#x76D8;&#x719F;&#x8089;&#x6587;&#x4EF6;&#x5939;&#x5DF2;&#x6709;&#x719F;&#x8089;&#x5219;&#x5220;&#x9664; &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x5728;&#x91CD;&#x65B0;&#x538B;&#x5236;
+        if [ -n &quot;$(baidupcs ls /&#x7EEF;&#x7EA2;/&#x7EEF;&#x7EA2;&#x3010;&#x66F4;&#x65B0;&#x81F3;&#x7B2C;$total_ep&#x96C6;&#x3011; | grep Ep$ep)&quot; ]; then
+            echo &#x7F51;&#x76D8;&#x4E2D;&#x5DF2;&#x6709;ep$ep &#x5C06;&#x5176;&#x5220;&#x9664;
+            baidupcs rm /&#x7EEF;&#x7EA2;/&#x7EEF;&#x7EA2;&#x3010;&#x66F4;&#x65B0;&#x81F3;&#x7B2C;$total_ep&#x96C6;&#x3011;/&#x3010;&#x7EEF;&#x7EA2;&#x8054;&#x5408;&#x5B57;&#x5E55;&#x7EC4;&#x3011;Scarlet.Ep$ep.1080p.mp4
+        fi
+
+        # &#x4E0A;&#x4F20;&#x719F;&#x8089;
+        baidupcs upload ~/Videos/&#x7EEF;&#x7EA2;/&#x719F;&#x8089;/&#x3010;&#x7EEF;&#x7EA2;&#x8054;&#x5408;&#x5B57;&#x5E55;&#x7EC4;&#x3011;Scarlet.Ep$ep.1080p.mp4 /&#x7EEF;&#x7EA2;/&#x7EEF;&#x7EA2;&#x3010;&#x66F4;&#x65B0;&#x81F3;&#x7B2C;$total_ep&#x96C6;&#x3011;/
+
+    fi
+
+done &lt;tasklist.txt
+
+# &#x8BFB;&#x53D6;&#x4E0A;&#x4F20;&#x540E;&#x7F51;&#x76D8;&#x719F;&#x8089;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;&#x5B9E;&#x9645;&#x6587;&#x4EF6;&#x603B;&#x6570;
+current_total_file=$(baidupcs ls /&#x7EEF;&#x7EA2;/&#x7EEF;&#x7EA2;&#x3010;&#x66F4;&#x65B0;&#x81F3;&#x7B2C;$total_ep&#x96C6;&#x3011; | grep &#x6587;&#x4EF6;&#x603B;&#x6570; | sed &quot;s/.*&#x6587;&#x4EF6;&#x603B;&#x6570;: \(.*\),.*/\1/g&quot;)
+
+# &#x82E5;&#x6587;&#x4EF6;&#x603B;&#x6570;&#x53D1;&#x751F;&#x53D8;&#x5316; &#x5373;&#x4E0D;&#x662F;&#x5BF9;&#x4EE5;&#x524D;&#x7684;&#x67D0;&#x96C6;&#x91CD;&#x65B0;&#x538B;&#x5236; &#x5219;&#x91CD;&#x547D;&#x540D;&#x7F51;&#x76D8;&#x719F;&#x8089;&#x6587;&#x4EF6;&#x5939;
+if [ &quot;$current_total_file&quot; -ne &quot;$total_file&quot; ]; then
+    baidupcs mv /&#x7EEF;&#x7EA2;/&#x7EEF;&#x7EA2;&#x3010;&#x66F4;&#x65B0;&#x81F3;&#x7B2C;$total_ep&#x96C6;&#x3011; /&#x7EEF;&#x7EA2;/&#x7EEF;&#x7EA2;&#x3010;&#x66F4;&#x65B0;&#x81F3;&#x7B2C;$current_total_file&#x96C6;&#x3011;
+fi
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Avanti 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-03 11:36:54
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="download-rename.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 下载 & 重命名">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"压制 & 上传","level":"1.2.2","depth":2,"previous":{"title":"下载 & 重命名","level":"1.2.1","depth":2,"path":"Scarlet/download-rename.md","ref":"Scarlet/download-rename.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","disqus","donate","github","github-buttons","copy-code-button","-lunr","-search","search-plus","advanced-emoji","emphasize","mermaid-gb3","puml","graph","chart","-sharing","sharing-plus","tbfed-pagefooter","anchors","terminal"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Avanti 2020","modify_label":"文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"video-coding"},"emphasize":{},"github":{"url":"https://github.com/Avanti1980"},"puml":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"donate":{"alipay":"https://raw.githubusercontent.com/Avanti1980/Notes-on-Linear-Algebra/master/img/zfb.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"https://raw.githubusercontent.com/Avanti1980/Notes-on-Linear-Algebra/master/img/wx.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"github-buttons":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"Avanti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"video-coding","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"压制视频记录"},"file":{"path":"Scarlet/encoding-upload.md","mtime":"2021-06-03T03:36:54.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-03T04:03:30.329Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
